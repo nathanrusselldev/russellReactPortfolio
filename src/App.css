@@ -13,7 +13,7 @@ li {
 * {
     margin: 0px;
     padding: 0px;
-  }
+}
   
 body {
     width: 100vw;
@@ -22,7 +22,16 @@ body {
     overflow-x: hidden;
     font-family: Futura, "Trebuchet MS";
   }
-  
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 35px;
+    padding-top: 10px;
+}
+
 .titleBar {
    color: var(--mainFont);
    font-weight: 900;
@@ -153,8 +162,7 @@ body {
 
 .bioContent {
     display: flex;
-    width: 80%;
-    font-size: 40px; 
+    font-size: 35px; 
     height: auto;
     width: auto;
     max-width: 1000px; 
@@ -167,7 +175,6 @@ body {
     align-items: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 5px;
-
 }
 
 .bioImage {
@@ -181,15 +188,12 @@ body {
     padding-right: 20px;
 }
 
-
-
 .carousel * {
     height: auto;
     width: auto;
     max-width: 1500px; 
     max-height: 1500px;
 }
-
 
 .carousel-root {
     padding: 0px;
@@ -207,6 +211,46 @@ body {
     padding-bottom: 25px;
 }
 
+.resumeContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumeContent a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.resumeEmbed {
+    height: 700px;
+    width: 850px;
+
+}
+
+.contactContent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+
+.contactContent ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.contactContent ul li {
+    padding: 5px;
+}
+.contactContent ul li {
+    padding: 5px;
+}
+.contactContent ul li button{
+    width: 250px;
+    text-decoration: none;
+}
+
 
 footer {
     width: 100%;
@@ -215,12 +259,14 @@ footer {
     border-top: 1px solid var(--main-foreground);
     background: var(--main-background);
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
 .contactInfo {
     display: flex;
     align-items: center;
+    justify-content: center;
+
 }
 

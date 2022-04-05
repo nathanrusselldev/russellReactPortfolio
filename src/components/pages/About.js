@@ -1,6 +1,5 @@
 import React from 'react';
 import myPhoto from '../../assets/images/portrait.jpg'
-import background from '../../assets/images/bg-image.jpg'
 
 export default function About() {
     return (
@@ -9,9 +8,16 @@ export default function About() {
             <img className='bioImage' src={myPhoto} />
           </div>
             <p className='bio'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>  
+            I truly believe that simplicity rules when it comes to coding and it is an approach I take when tackling all problems. My name is Nathan and i am a full stack developer located in Columbus, Ohio. <br></br>
+            <br></br>
+            I have never been afraid of reinventing myself and took some time off work to finish a degree is psychology and complete a coding bootcamp. Becoming a developer is something I have always dreamed of and now I feel I am ready to enact that dream!
+            <br></br>
+            <br></br>
+            Feel free to view my portfolio and resume under their respective tabs, I am sure we can do great things together.
+            </p>
+            
         </div>
+        
     );
 }
 
