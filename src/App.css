@@ -1,0 +1,104 @@
+:root {
+    --main-foreground: #193F6C;
+    --main-background: #EDF2F4;
+    --content-background: #ef233c;
+    --mainFont: rgb(211, 180, 5);
+}
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+body {
+    width: 100vw;
+    height: auto;
+    background-color: var(--main-background);
+    overflow-x: hidden;
+    font-family: Futura, "Trebuchet MS";
+  }
+
+
+
+.content {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    padding: 0px;
+    height: calc(100vh - 100px);
+    background-image: url('../src/assets/images/fractalbackground.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    /* background: linear-gradient(180deg, rgba(141,153,174,1) 0%, rgba(237,242,244,1) 35%, rgba(239,35,60,1) 100%); */
+}
+
+.quote {
+    color: var(--mainFont);
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 50%;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 900;
+    display: flex;
+    flex-shrink: 50%;
+}
+
+.carousel-root {
+    margin: 0px auto;
+    padding: 0px;
+    width: 95%;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(141,153,174,1) 0%, rgba(237,242,244,1) 35%, rgba(239,35,60,1) 100%);
+}
+
+.thumbs {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent {
+    background-color: var(--content-background);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.navBar {
+    height: 60px;
+    padding: 15px 50px;
+    background-color: var(--main-foreground);
+    color: var(--mainFont);
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-tabs {
+    display: flex;
+    flex-direction: row;
+}
+
+  .contactInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+footer {
+    width: 100%;
+    height: 60px;
+    padding: 0px 0px 0px 0px;
+    border-top: 1px solid var(--main-foreground);
+    background: var(--main-foreground);
+
+  }
