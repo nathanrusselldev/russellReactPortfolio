@@ -5,7 +5,7 @@ export default function Header() {
     // We return all the JSX inside a parent element with a className of "container".
     return (
         
-        <h1 class= "titleBar">Nathan Russell: Full Stack Developer</h1>  
+        <h1 class= "titleBar">Nathan <span>Russell</span></h1>  
     );
 }
 

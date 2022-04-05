@@ -1,8 +1,10 @@
 :root {
     --main-foreground: #193F6C;
-    --main-background: #EDF2F4;
+    --main-background: #f9fafb;
     --content-background: #ef233c;
-    --mainFont: rgb(211, 180, 5);
+    --mainFont: #000000;
+    --whiteFont: #f9fafb;
+    /* possible font rgb(211, 180, 5) */
 }
 li {
     list-style: none;
@@ -20,24 +22,123 @@ body {
     overflow-x: hidden;
     font-family: Futura, "Trebuchet MS";
   }
+  
+.titleBar {
+   color: var(--mainFont);
+   font-weight: 900;
+   font-size: 40px;
+   border-bottom: 2px solid #a9cddb;
+}
+.titleBar span {
+    color: #8b8b8b
+}
+ .navBar {
+    height: 60px;
+    padding: 15px 50px;
+    background-color: var(--main-background);
+    color: var(--mainFont);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.nav-tabs {
+    display: flex;
+    flex-direction: row;
+}
+.nav-tabs li {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
 
+.nav-item {
+    align-items: center;
+    background-color: #a9cddb;
+    font-family: Futura, "Trebuchet MS";
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 25px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.nav-item:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    z-index: -1;
+    
+}
+  
+.nav-item:hover:after {
+    transform: translate(0, 0);
+}
+  
+.nav-item:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+  
+.nav-item:hover {
+    outline: 0;
+    border-radius: 0px;
+    transition: border-radius .5s ease-in;
+    transition: background-color .25s ease-in;
+    background-color: #316f7f;
+    color: var(--whiteFont);
+}
+  
+  @media (min-width: 768px) {
+    .nav-item {
+      padding: 0 40px;
+    }
+}
 
 .content {
     width: 100%;
     height: auto;
-    margin: 0px auto;
-    padding: 0px;
     height: calc(100vh - 100px);
-    background-image: url('../src/assets/images/fractalbackground.png');
+    background: linear-gradient(195deg, rgba(103,163,180,1) 27%, rgba(146,205,216,1) 27%, rgba(148,207,218,1) 49%, rgba(193,250,255,1) 75%, rgba(49,111,127,1) 75%, rgba(127,44,0,1) 89%);
     background-size: cover;
     background-position: center center;
     position: relative;
+    display: flex;
+    justify-content: center;
     /* background: linear-gradient(180deg, rgba(141,153,174,1) 0%, rgba(237,242,244,1) 35%, rgba(239,35,60,1) 100%); */
 }
 
+.mainContent {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    opacity: 0.3;
+    height: auto;
+    width: auto;
+    max-width: 1500px; 
+    max-height: 1500px;
+}
+
 .quote {
-    color: var(--mainFont);
+    color: var(--main-background);
     position: absolute;
     top: 40%;
     left: 30%;
@@ -47,50 +148,63 @@ body {
     font-style: italic;
     font-weight: 900;
     display: flex;
-    flex-shrink: 50%;
+    letter-spacing: .05em;
 }
 
+.bioContent {
+    display: flex;
+    width: 80%;
+    font-size: 40px; 
+    height: auto;
+    width: auto;
+    max-width: 1000px; 
+    max-height: 700px;
+    margin-top: 25px;
+    color: #f9fafb;
+    background: rgb(244,237,237);
+    background: linear-gradient(45deg, rgba(244,237,237,1) 0%, rgba(180,176,176,0.7035189075630253) 100%);
+    padding: 5px;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+
+}
+
+.bioImage {
+    display: flex;
+    align-self: center;
+    float: left;
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    align-content: center;
+    padding-right: 20px;
+}
+
+
+
+.carousel * {
+    height: auto;
+    width: auto;
+    max-width: 1500px; 
+    max-height: 1500px;
+}
+
+
 .carousel-root {
-    margin: 0px auto;
     padding: 0px;
-    width: 95%;
     height: 100px;
-    background: linear-gradient(180deg, rgba(141,153,174,1) 0%, rgba(237,242,244,1) 35%, rgba(239,35,60,1) 100%);
+    margin-top: 25px;
 }
 
 .thumbs {
     display: flex;
     justify-content: center;
+    
 }
 
-.mainContent {
-    background-color: var(--content-background);
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-}
-
-.navBar {
-    height: 60px;
-    padding: 15px 50px;
-    background-color: var(--main-foreground);
-    color: var(--mainFont);
-    display: flex;
-    align-items: center;
-
-}
-
-.nav-tabs {
-    display: flex;
-    flex-direction: row;
-}
-
-  .contactInfo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.carousel .thumbs-wrapper {
+    padding-bottom: 25px;
 }
 
 
@@ -99,6 +213,14 @@ footer {
     height: 60px;
     padding: 0px 0px 0px 0px;
     border-top: 1px solid var(--main-foreground);
-    background: var(--main-foreground);
+    background: var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  }
+.contactInfo {
+    display: flex;
+    align-items: center;
+}
+

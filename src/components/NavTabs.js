@@ -4,47 +4,47 @@ function NavTabs({currentPage, handlePageChange}) {
     return (
   <div id='pages'>
     <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <button
+      <li className="nav-tab">
+        <button 
           href="#home"
           onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+          className='nav-item' 
         >
           Home
         </button>
       </li>
-      <li className="nav-item">
+      <li className='nav-tab'>
         <button
           href="#about"
           onClick={() => handlePageChange('About')}
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          className='nav-item'
         >
           About
         </button>
       </li>
-      <li className="nav-item">
+      <li className="nav-tab">
         <button
           href="#blog"
           onClick={() => handlePageChange('Work')}
-          className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
+          className='nav-item'
         >
           Work
         </button>
       </li>
-      <li className="nav-item">
+      <li className="nav-tab">
         <button
           href="#contact"
           onClick={() => handlePageChange('Resume')}
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          className='nav-item'
         >
           Resume
         </button>
       </li>
-      <li className="nav-item">
+      <li className="nav-tab">
         <button
           href="#contact"
           onClick={() => handlePageChange('Contact')}
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          className='nav-item'
         >
           Contact
         </button>
